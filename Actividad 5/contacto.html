@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Lic. Marcela Suárez</title>
+</head>
+
+    <body>
+     <header>
+        <img src="recursos/imagenes/nutricionista.jpg.jpg" alt="Logo Lic. Marcela Suárez"width="240">
+        <nav>
+            <a href="./quiensoy.html">
+                Inicio
+            </a>
+             <a href="./contacto.html">
+                Contacto
+            </a>
+        </nav>
+
+     </header>
+     <main>
+        <h1>
+           Formulario de Contacto
+        </h1>
+        <p>
+            Si querés consultar disponibilidad de turnos o hacerme una pregunta sobre mis servicios,
+            completá el siguiente formulario y te voy a responder a la brevedad.
+        </p>
+
+        <form>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="motivo">Motivo de la consulta:</label>
+            <select id="motivo" name="motivo">
+                <option value="primera-consulta">Primera consulta</option>
+                <option value="seguimiento">Seguimiento</option>
+                <option value="deportiva">Consulta deportiva</option>
+                <option value="patologia">Consulta por patología (diabetes, hipertensión, colesterol)</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="modalidad">Modalidad preferida:</label>
+            <select id="modalidad" name="modalidad">
+                <option value="presencial">Presencial</option>
+                <option value="videollamada">Videollamada</option>
+            </select>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="40"></textarea>
+
+            <input type="submit" value="Enviar consulta">
+        </form>
+
+     </main>
+     <footer>
+        <p>Lic. Marcela Suárez - Nutricionista</p>
+     </footer>
+
+
+    </body>
+
+</html>
