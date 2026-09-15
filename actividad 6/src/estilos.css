@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2e2e2e;
+    background-color: #fdfbf7;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    color: #35524a;
+    margin-bottom: 0.75rem;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    color: #35524a;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.encabezado-sitio {
+    background-color: #4c7a5a;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenido-principal {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.pie-pagina {
+    background-color: #35524a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.encabezado-sitio nav a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.encabezado-sitio nav a:hover {
+    text-decoration: underline;
+}
+
+.contenido-principal h1 + p {
+    font-style: italic;
+    color: #555555;
+}
+
+.contenido-principal ul li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pie-pagina p {
+    font-size: 0.9rem;
+}
