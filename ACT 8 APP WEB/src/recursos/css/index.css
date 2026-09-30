@@ -1,0 +1,119 @@
+/*
+ORGANIZACIÓN DEL ARCHIVO :
+
+/* Cargamos la tipografía que viene en el proyecto (carpeta fuentes). */
+@font-face {
+    font-family: 'Sora';
+    src: url(./fuentes/Sora-Regular.ttf);
+}
+
+/*
+box-sizing: border-box hace que el ancho (width) incluya el padding y el borde.
+Así las medidas son más fáciles de calcular: si decimos 300px, mide 300px.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* Regla para el elemento raíz (html) con selector de tipo:
+   usamos la tipografía del proyecto y el tamaño de fuente general de 16px.
+   Todos los demás elementos heredan estos valores. */
+html {
+    font-family: 'Sora', Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Sacamos el margen que el navegador le pone al body por defecto. */
+body {
+    margin: 0;
+    color: #3f4d48;
+    background-color: #fafaf7;
+}
+
+/* Las imágenes nunca van a ser más anchas que su contenedor. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #3f4d48;
+}
+
+/* Cada label en su propia línea, arriba de su campo. */
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+/* Los campos ocupan todo el ancho y usan la misma fuente que la página. */
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #3f4d48;
+    border: none;
+    cursor: pointer;
+}
+
+/*
+display: flex cambia el comportamiento en dos sentidos:
+- EXTERNO: el header se sigue comportando como bloque (ocupa todo el ancho).
+- INTERNO: sus hijos (el logo y el nav) se acomodan uno al lado del otro, en fila.
+*/
+.encabezado {
+    display: flex;
+    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+    align-items: center;            /* centrados verticalmente */
+    padding: 16px 32px;
+    background-color: #e9ecdf;      /* MISMO color que el pie */
+}
+
+/* El menú también es flex, para que los enlaces queden en fila. */
+.menu {
+    display: flex;
+    gap: 24px;
+    list-style: none; /* saca los puntitos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none; /* saca el subrayado */
+    font-weight: bold;
+}
+
+/* --- Bloque 2 del layout: CONTENIDO PRINCIPAL --- */
+.principal {
+    max-width: 900px;
+    margin: 0 auto; /* centra el contenido en la pantalla */
+    padding: 32px;
+}
+
+.cabana {
+    margin-bottom: 32px;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e9ecdf;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pie {
+    padding: 24px;
+    text-align: center;
+    background-color: #e9ecdf; /* MISMO color que el encabezado */
+}

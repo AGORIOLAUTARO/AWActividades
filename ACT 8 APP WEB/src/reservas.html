@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Sustentable - Reservas</title>
+    <!-- Enlazamos la misma hoja de estilos que index.html, así las dos páginas comparten el mismo diseño. -->
+    <link rel="stylesheet" href="./recursos/css/index.css">
+</head>
+<body>
+    <!-- Mismo encabezado que index.html: la consigna pide que ambas páginas tengan el mismo layout general. -->
+    <header class="encabezado">
+        <!-- Logo con enlace al inicio. El alt describe la imagen y a dónde lleva el enlace. -->
+        <a href="index.html">
+            <img src="./recursos/imagenes/logo-rs.svg" alt="Retiro Sustentable - Ir al inicio" width="180">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#cabanas">Cabañas</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- La clase "principal" es la misma que en index.html: así el contenido tiene el mismo estilo en las dos páginas. -->
+    <main class="principal">
+        <h1>Reservas</h1>
+        <!-- Antes era <h4> justo debajo del <h1>: se salteaban niveles.
+             Los títulos se eligen por jerarquía, no por tamaño, así que va <h2>. -->
+        <h2>Contactanos</h2>
+
+        <!-- Atributos del formulario:
+             action: la dirección del servidor que recibe los datos.
+             method="post": los datos viajan ocultos (no aparecen en la URL). Es lo correcto para datos personales. -->
+        <form action="/reservas" method="post">
+            <!-- <fieldset> agrupa los campos y <legend> es su leyenda (el título del grupo). -->
+            <fieldset>
+                <legend>Datos de la reserva</legend>
+
+                <!-- Cada <label> se enlaza con su campo: el "for" del label es igual al "id" del input.
+                     Así, al hacer clic en el texto se activa el campo, y el lector de pantalla lee la etiqueta.
+                     El "name" es el nombre con el que el dato llega al servidor. -->
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <!-- type="tel": en el celular muestra el teclado numérico. -->
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <!-- type="email": el navegador controla que tenga formato de email. -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- type="date": muestra un calendario para elegir la fecha. -->
+                <label for="fecha-desde">Fecha desde</label>
+                <input type="date" id="fecha-desde" name="fecha_desde" required>
+
+                <label for="fecha-hasta">Fecha hasta</label>
+                <input type="date" id="fecha-hasta" name="fecha_hasta" required>
+
+                <!-- <textarea> para textos largos. No es obligatorio, por eso no lleva required. -->
+                <label for="comentario">Comentario</label>
+                <textarea id="comentario" name="comentario" rows="5"></textarea>
+            </fieldset>
+
+            <!-- Botón que envía el formulario. -->
+            <button type="submit">Enviar consulta</button>
+        </form>
+    </main>
+
+    <!-- Mismo pie que index.html, con la etiqueta semántica <footer>. -->
+    <footer class="pie">
+        <p>&copy; 2026 Retiro Sustentable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

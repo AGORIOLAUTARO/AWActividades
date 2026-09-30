@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Sustentable - Catálogo</title>
+    <link rel="stylesheet" href="./recursos/css/index.css">
+</head>
+<body>
+    <!-- Cambiamos <div> por <header>: es la etiqueta semántica para el encabezado del sitio. Así el navegador, los buscadores y los lectores de pantalla saben que esta parte es el encabezado. -->
+    <header class="encabezado">
+        <!-- El logo es un enlace al inicio: es lo que el usuario espera al hacer clic en el logo.
+             El alt es importante porque: lo lee el lector de pantalla para personas con discapacidad visual,
+             se muestra si la imagen no carga, y ayuda a los buscadores a entender la imagen. -->
+        <a href="index.html">
+            <img src="./recursos/imagenes/logo-rs.svg" alt="Retiro Sustentable - Ir al inicio" width="180">
+        </a>
+
+        <!-- <nav> indica que este es el menú de navegación principal. -->
+        <nav>
+            <!-- Usamos una lista <ul> porque el menú es un conjunto de enlaces. -->
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#cabanas">Cabañas</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <main> contiene el contenido principal de la página. Debe haber uno solo.
+         La clase "principal" es para darle estilo en el CSS (es uno de los 3 bloques del layout). -->
+    <main class="principal">
+        <!-- Había dos <h1>. Dejamos uno solo como título principal de la página. -->
+        <h1>Catálogo de Cabañas</h1>
+        <p>Bienvenido a nuestro catálogo de cabañas en San Javier, Traslasierras. Explorá nuestras opciones y encontrá la que mejor se adapte a tus necesidades.</p>
+
+        <!-- <section> agrupa un bloque de contenido con su propio título.
+             El id="cabanas" permite que el enlace "Cabañas" del menú lleve directo hasta acá. -->
+        <section id="cabanas">
+            <!-- El segundo <h1> pasa a ser <h2>: es el título de esta sección, no de toda la página. -->
+            <h2>Cabañas para alquiler</h2>
+
+            <!-- <article> en lugar de <div>: cada cabaña es un contenido independiente,
+                 que tiene sentido por sí solo. Los títulos de cada cabaña son <h3>
+                 porque están dentro de la sección que tiene <h2>. -->
+            <article class="cabana">
+                <img src="./recursos/imagenes/modelo1.webp" alt="Cabaña 1 de madera al pie de la montaña" width="960" height="717">
+                <h3>Cabaña 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae nisl vel lorem pretium dictum. Capacidad para 2 personas.</p>
+                <p class="precio">$ 45.000 por día</p>
+                <!-- Cada cabaña tiene un enlace que lleva a la página de reservas. -->
+                <a href="reservas.html">Reservar</a>
+            </article>
+
+            <article class="cabana">
+                <img src="./recursos/imagenes/modelo2.webp" alt="Cabaña 2 rodeada de vegetación serrana" width="960" height="717">
+                <h3>Cabaña 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere, magna at tincidunt varius, justo nunc feugiat ipsum. Capacidad para 4 personas.</p>
+                <p class="precio">$ 60.000 por día</p>
+                <a href="reservas.html">Reservar</a>
+            </article>
+
+            <article class="cabana">
+                <img src="./recursos/imagenes/modelo3.webp" alt="Cabaña 3 con galería y vista a las sierras" width="960" height="717">
+                <h3>Cabaña 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac erat non arcu convallis pulvinar. Capacidad para 4 personas.</p>
+                <p class="precio">$ 65.000 por día</p>
+                <a href="reservas.html">Reservar</a>
+            </article>
+
+            <article class="cabana">
+                <img src="./recursos/imagenes/modelo4.webp" alt="Cabaña 4 amplia con espacio verde" width="960" height="717">
+                <h3>Cabaña 4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fermentum, leo sed luctus tempor, risus mi aliquet est. Capacidad para 6 personas.</p>
+                <p class="precio">$ 80.000 por día</p>
+                <a href="reservas.html">Reservar</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Cambiamos <div> por <footer>: es la etiqueta semántica para el pie de página del sitio. -->
+    <footer class="pie">
+        <p>&copy; 2026 Retiro Sustentable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
